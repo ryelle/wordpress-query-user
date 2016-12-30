@@ -1,6 +1,6 @@
 {
   "name": "wordpress-query-user",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A component for fetching WordPress user data from the REST API.",
   "repository": {
     "type": "git",
