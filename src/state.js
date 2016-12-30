@@ -98,7 +98,7 @@ export function requestUser( userId ) {
 		const query = {};
 		// If we're looking for a user name, we need to tweak the request slightly
 		if ( 'string' === typeof userId ) {
-			url = '/wp/v2/user/';
+			url = '/wp/v2/users/';
 			query.slug = userId;
 		}
 

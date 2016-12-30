@@ -43,7 +43,7 @@ QueryUser.propTypes = {
 	userId: PropTypes.oneOfType( [
 		PropTypes.string,
 		PropTypes.number
-	] ).required,
+	] ).isRequired,
 	requestingUser: PropTypes.bool,
 	requestUser: PropTypes.func
 };
