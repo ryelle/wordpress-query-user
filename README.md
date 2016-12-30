@@ -24,7 +24,7 @@ Render the component, passing the requested `userId` (which can be a numeric ID,
 
 ```jsx
 import React from 'react';
-import QueryUsers from 'wordpress-query-users';
+import QueryUsers from 'wordpress-query-user';
 import MyUserItem from './user-item';
 
 export default function MyUser( { user } ) {
