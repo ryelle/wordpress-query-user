@@ -13,10 +13,10 @@ window.SiteSettings = {
 
 As of version 1.1, the URL should _not_ include `/wp_json` – `wordpress-rest-api-oauth-1` adds that for us.
 
-QueryUsers
+QueryUser
 ==========
 
-QueryUsers is a React component used in managing the fetching of user data.
+QueryUser is a React component used in managing the fetching of user data.
 
 ## Usage
 
@@ -24,13 +24,13 @@ Render the component, passing the requested `userId` (which can be a numeric ID,
 
 ```jsx
 import React from 'react';
-import QueryUsers from 'wordpress-query-user';
+import QueryUser from 'wordpress-query-user';
 import MyUserItem from './user-item';
 
 export default function MyUser( { user } ) {
 	return (
 		<div>
-			<QueryUsers userId="author" />
+			<QueryUser userId="author" />
 			<MyUserItem user={ user } />
 		</div>
 	);
@@ -80,7 +80,7 @@ let reducer = combineReducers( { ...otherReducers, users } );
 If you need to call an action (the query component should take care of this most of the time), you can pull the action out specifically:
 
 ```jsx
-import { requestUsers } from 'wordpress-query-user/lib/state';
+import { requestUser } from 'wordpress-query-user/lib/state';
 ```
 
 [View the file itself](src/state.js) to see what else is available.
