@@ -7,7 +7,7 @@ import keyBy from 'lodash/keyBy';
 import isArray from 'lodash/isArray';
 import API from 'wordpress-rest-api-oauth-1';
 const api = new API( {
-	url: SiteSettings.endpoint
+	url: SiteSettings.endpoint,
 } );
 
 /**
@@ -67,7 +67,7 @@ export function names( state = {}, action ) {
 			const userName = action.user.slug;
 			const userId = action.user.id;
 			return Object.assign( {}, state, {
-				[ userName ]: userId
+				[ userName ]: userId,
 			} );
 		default:
 			return state;
@@ -77,7 +77,7 @@ export function names( state = {}, action ) {
 export default combineReducers( {
 	items,
 	requests,
-	names
+	names,
 } );
 
 /**
@@ -90,7 +90,7 @@ export function requestUser( userId ) {
 	return ( dispatch ) => {
 		dispatch( {
 			type: USER_REQUEST,
-			userId
+			userId,
 		} );
 
 		// If we're looking for a user ID, we can request it directly
@@ -110,14 +110,14 @@ export function requestUser( userId ) {
 			dispatch( {
 				type: USER_REQUEST_SUCCESS,
 				userId,
-				user
+				user,
 			} );
 			return null;
 		} ).catch( ( error ) => {
 			dispatch( {
 				type: USER_REQUEST_FAILURE,
 				userId,
-				error
+				error,
 			} );
 		} );
 	};

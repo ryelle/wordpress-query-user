@@ -1,10 +1,11 @@
 /**
  * External dependencies
  */
-import { Component, PropTypes } from 'react';
+import { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import debugFactory from 'debug';
+import PropTypes from 'prop-types';
 
 /**
  * Internal dependencies
@@ -42,14 +43,14 @@ class QueryUser extends Component {
 QueryUser.propTypes = {
 	userId: PropTypes.oneOfType( [
 		PropTypes.string,
-		PropTypes.number
+		PropTypes.number,
 	] ).isRequired,
 	requestingUser: PropTypes.bool,
-	requestUser: PropTypes.func
+	requestUser: PropTypes.func,
 };
 
 QueryUser.defaultProps = {
-	requestUser: () => {}
+	requestUser: () => {},
 };
 
 export default connect(
@@ -61,7 +62,7 @@ export default connect(
 	},
 	( dispatch ) => {
 		return bindActionCreators( {
-			requestUser
+			requestUser,
 		}, dispatch );
 	}
 )( QueryUser );
